@@ -6,27 +6,27 @@ export default function App() {
   return (
 		<div className="App">
 			<div className="container">
-        <Weather />
+				<Weather />
 				<footer>
 					This project was coded by{" "}
 					<a
-						rel="noreferrer"
 						href="https://github.com/AngelaLynnSmith"
-						target="blank">
+						target="blank"
+						rel="noopener noreferrer">
 						Angela Lynn Smith,
 					</a>{" "}
 					is open-sourced on{" "}
 					<a
-						rel="noreferrer"
 						href="https://github.com/AngelaLynnSmith/react-wx-app"
-						target="blank">
+						target="blank"
+						rel="noopener noreferrer">
 						Github,
 					</a>{" "}
 					and is hosted on{" "}
 					<a
-						rel="noreferrer"
 						href="https://react-wx-app-2024.netlify.app/"
-						target="blank">
+						target="blank"
+						rel="noopener noreferrer">
 						Netlify.
 					</a>
 				</footer>
