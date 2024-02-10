@@ -18,31 +18,37 @@ export default function WeatherForecast(props) {
 		setLoaded(true);
     }
     
+    function load() {
+let apiKey = "e6c2364656962bdcb16bc352fc42569a";
+let longitude = props.coordinates.lon;
+let latitude = props.coordinates.lat;
+        let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
+        
+        	axios.get(apiUrl).then(handleResponse);
+    }
+    
 	if (loaded) {
 		return (
 			<div className="WeatherForecast">
 				<div className="row">
 					{forecast.map(function (dailyForecast, index) {
-						if (index < 5) {
-							return (
-								<div
-									className="col"
-									key={index}>
-									<WeatherForecastDay data={dailyForecast} />
-								</div>
-							);
+                        if (index < 5) {
+                            return (
+                                <div
+                                    className="col"
+                                    key={index}>
+                                    <WeatherForecastDay data={dailyForecast} />
+                                </div>
+                            );
+                        } else { 
+                            return null;
 						}
 					})}
 				</div>
 			</div>
 		);
 	} else {
-		let apiKey = "e6c2364656962bdcb16bc352fc42569a";
-		let longitude = props.coordinates.lon;
-		let latitude = props.coordinates.lat;
-		let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
-
-		axios.get(apiUrl).then(handleResponse);
+		load()
 
 		return null;
 	}
