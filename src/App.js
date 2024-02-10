@@ -3,8 +3,8 @@ import Weather from "./Weather";
 import './App.css';
 
 export default function App() {
-  return (
-		<div className="App">
+	return (
+	<div className="App">
 			<div className="container">
 				<Weather defaultCity="Atlanta" />
 				<footer>
@@ -30,8 +30,8 @@ export default function App() {
 						Netlify.
 					</a>
 				</footer>
-			</div>
-		</div>
+					</div>
+			  </div>
 	);
 }
 
