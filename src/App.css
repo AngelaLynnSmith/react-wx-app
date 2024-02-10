@@ -1,7 +1,6 @@
 .App {
      max-width: 600px;
      margin: 30px auto;
-     background-color: yellow;
 }
 
 .App footer {
@@ -30,4 +29,7 @@ background-repeat: no-repeat;
     background-position: center;
     margin-bottom: none;
   }
+   .weatherforecast-day {
+    flex-basis: 50%; 
+   }
 }
