@@ -1,10 +1,33 @@
 .App {
      max-width: 600px;
      margin: 30px auto;
+     background-color: yellow;
 }
 
 .App footer {
   font-size: 11px;
   margin: 10px 0;
   text-align: center;
+  color: black;
+  font-weight: 700;
+  background-color: rgb(182, 182, 74);
+}
+
+a {
+     color: rgb(1, 56, 1);
+     font-weight: 900;
+}
+
+.container {
+background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/772/original/girasoles.jpg?1707567509");
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    background-size: auto 100;
+    background-position: center;
+    margin-bottom: none;
+  }
 }
