@@ -49,7 +49,7 @@ let latitude = props.coordinates.lat;
 		);
 	} else {
 		load()
-
+		
 		return null;
 	}
 }
